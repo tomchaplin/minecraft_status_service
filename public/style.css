@@ -1,0 +1,185 @@
+:root{
+	--theme-back: #131c23;
+	--theme-fore: #86846d;
+	--theme-emph: #DBE9F3;
+	--theme-good: #41b431;
+	--theme-poor: #632121;
+}
+
+
+body {
+	background-color : var(--theme-back);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+p {
+	text-align: center;
+	color: var(--theme-fore);
+}
+
+.main_grid{
+	display: flex;
+	flex-direction: column;
+	margin: 0 25%;
+}
+
+.on_off_label {
+	font-family: 'Graduate', cursive;
+	color: var(--theme-fore);
+	border: 2px solid var(--theme-fore);
+	padding: 6px;
+	display: block;
+	float: left;
+	border-radius:2px;
+	transition: color 0.25s, border-color 0.25s;
+	width: 35px;
+	text-align: center;
+}
+
+.server_label {
+	padding: 6px;
+	margin-left: 5px;
+	float:left;
+	font-family: 'Roboto Slab', serif;
+	/* FDFACD for light brown*/
+	/* DBE9F3 for light blue*/
+	color: var(--theme-fore);
+}
+
+.on_colours {
+	color: var(--theme-emph);
+	border-color: var(--theme-emph)
+}
+
+.row {
+	margin: 5px 0;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+p.players_online {
+	font-family: 'Roboto Slab', serif;
+	color: var(--theme-emph);
+	height: 22px;
+}
+
+button {
+	margin: 5px 0;
+	font-family: 'Graduate', serif;
+	background-color: #131c23;
+	border: 2px solid var(--theme-fore);
+	color: var(--theme-fore);
+	padding: 6px;
+	border-radius:2px;
+	cursor:pointer;
+	transition: color 0.25s, border-color 0.25s;
+}
+
+button.link_block {
+	color:var(--theme-poor);
+	border-color: var(--theme-poor);
+	cursor: default;
+}
+
+button.link_block:hover {
+	color:var(--theme-poor);
+	border-color: var(--theme-poor);
+}
+
+button:focus {
+	outline: 0;
+}
+
+button:hover {
+	color: var(--theme-emph);
+	border-color: var(--theme-emph);
+}
+
+button.success {
+	color: var(--theme-good);
+	border-color: var(--theme-good);
+}
+
+button.failure {
+	color:var(--theme-poor);
+	border-color: var(--theme-poor);
+}
+
+.half_width{
+	width:48%;
+}
+
+.wrapper{
+	width:50%;
+	margin-left:25%;
+}
+
+.loader{
+	position: relative;
+	height:0px;
+	margin:11px 0px;
+	border-top: 2px solid var(--theme-fore);
+	animation-name: loader-anim;
+	animation-duration: 0.75s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.hide_loader{
+	border-color: var(--theme-back);
+}
+
+input[type=password] {
+	background-color:  var(--theme-back);
+	border: 0;
+	border-bottom: 2px solid var(--theme-fore);
+	margin: 15px 0;
+	font-family: 'Roboto Slab', serif;
+	color: var(--theme-fore);
+	width: 100%;
+	transition: width 0.75s, color 0.5s, border-color 0.5s;
+}
+
+input.no_display{
+	width:0%
+}
+
+input.incorrect_pass{
+	color:var(--theme-poor);
+	border-color: var(--theme-poor);
+}
+
+input.correct_pass{
+	color: var(--theme-good);
+	border-color: var(--theme-good);
+}
+
+input:focus {
+	outline: 0;
+}
+
+@keyframes loader-anim {
+	0% { width: 0%; left:0%;}
+	5% { width: 0%; left:0%;}
+	35% { width: 50%; left:0%}
+	65%   { width: 50%; left: 50%;}
+	95% {width: 0%; left: 100%;}
+	100% {width: 0%; left: 100%;}
+}
+
+@media only screen and (max-width: 425px) {
+	.main_grid{
+		margin: 0 10%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.main_grid{
+		margin: 0 35%;
+	}
+}

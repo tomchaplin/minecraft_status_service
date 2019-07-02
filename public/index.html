@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Graduate|Roboto+Slab&display=swap" rel="stylesheet">
+		<title>Server Status</title>
+	</head>
+	<body>
+		<div class="main_grid">
+			<img src="logo.png" width=100%></img>
+			<!-- Computer switched on indicator-->
+			<div class="row">
+				<div class="on_off_label" id="computer_indicator">Off</div>
+				<div class="server_label" id="computer_label">Superuser's Computer</div>
+			</div>
+			<!-- Server switched on indicator-->
+			<div class="row">
+				<div class="on_off_label" id="server_indicator">Off</div>
+				<div class="server_label" id="server_label">Minecraft Server</div>
+			</div>
+			<p class="players_online" id="playersOnline"></p>
+			<!-- Refresh button -->
+			<div class="row flex">
+				<button class="half_width" onclick="updateStatus()">
+					Refresh
+				</button>
+				<button id="map_button" class="half_width" onclick="goToMap()" type="button">
+					Map
+				</button>
+			</div>
+			<!-- Loading animation -->
+			<div class="wrapper">
+				<div class="loader hide_loader" id="loader"></div>
+			</div>
+			<!-- Command buttons -->
+			<div class="row flex">
+				<button class="half_width" onclick="dealWithButton('boot',this)">
+					Boot
+				</button>
+				<button class="half_width" onclick="dealWithButton('shutdown',this)">
+					Shutdown
+				</button>
+			</div>
+			<div class="row flex">
+				<button class="half_width" onclick="dealWithButton('start_server',this)">
+					Start Server
+				</button>
+				<button class="half_width" onclick="dealWithButton('stop_server',this)">
+					Stop Server
+				</button>
+			</div>
+			<!-- Password input box -->
+			<input class="no_display" type="password" id="password" placeholder="Password...">
+		</div>
+		<!-- Firebase JS -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<!-- TODO: Check that these are the latest sources -->
+		<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-auth.js"></script>
+		<!-- axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<!-- Application JS -->
+		<script src="app.js"></script>
+	</body>
+</html>

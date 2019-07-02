@@ -1,0 +1,26 @@
+{
+  "name": "server_status",
+  "version": "1.0.0",
+  "description": "A small server to query the server status of a Minecraft server",
+  "main": "web_index.js",
+  "scripts": {
+    "start_web": "node web_index",
+    "dev_web": "nodemon web_index",
+    "start_bot": "node bot_index",
+    "dev_bot": "nodemon bot_index"
+  },
+  "author": "Thomas Chaplin",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "discord.js": "^11.5.1",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.2.0",
+    "minecraft-ping": "^1.0.0",
+    "ping": "^0.2.2",
+    "wakeonlan": "^0.1.0"
+  }
+}
