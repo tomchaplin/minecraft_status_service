@@ -130,3 +130,4 @@ Also ensure that the firewall is configured to accept packets from 40123 locally
 ## Known Issues
 
 * Whitelist and superusers are found by username which I don't think are unique.
+* The configuration is a mess.
