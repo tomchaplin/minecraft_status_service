@@ -30,7 +30,36 @@ I used a Raspberry Pi 2.
 
 Below is a basic diagram of the network architecture so you can configure appropriate port forwarding and firewalls.
 
-![](architecture.png)
+![](readme_pics/architecture.png)
+
+## Available Commands
+
+### Web front-end
+
+![](readme_pics/mc_off.png)
+
+On the web front-end you can see whether the Minecraft computer is turned on and whether the Minecraft server is running.
+You can then:
+
+* Boot up the Minecraft computer
+* Shutdown the Minecraft computer
+* Start the Minecraft server
+* Stop the Minecraft server
+* View the Dynmap
+
+### Discord bot
+
+The `!help` command in the Discord bot lists the commands available to white-listed users:
+```
+The following commands are available:
+• `!get_status` - Get the current status of Tom's computer and the Minecraft server.
+• `!boot` - Boot up Tom's computer.
+• `!shutdown` - Shutdown the server and Tom's computer.
+• `!cancel_shutdown` - Cancel any shutdown requests recently sent to Tom's computer.
+• `!start_server` - Start up the minecraft server.
+• `!stop_server` - Stop the minecraft server.
+```
+Upon receipt of a valid `!boot` or `!shutdown` command, the superuser will be alerted via a Discord Direct Message.
 
 ## Setup
 
