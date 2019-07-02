@@ -1,6 +1,3 @@
----
-m2h-style: design_doc
----
 # Minecraft Server Status - Web Service and Discord Bot
 
 # Introduction
